@@ -1,0 +1,174 @@
+* {/*para generalizar*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(250, 250, 250);
+    margin: 0;/*pq repito isso se ja tenho no geral?*/
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.instagram-wrapper {
+    display: flex;/* elementos em linha ocupando todo espaço*/
+    align-items: flex-start;/*eixo vertical, garantido que o conteudo dos filhos vai ser alinhado no topo*/
+    justify-content: center;/* eixo horizontal*(começa da esquerda)*/
+    width: 60%; /* 60% do body*/
+    height: 100vh;
+    gap: 16px;
+    margin-top: 32px; /*margin do pai para separar to topo da página*/
+}
+.instagram-phone{
+    display: flex;/* elementos em linha ocupando todo espaço*/
+    align-items: flex-start;
+    justify-content: center ;
+}
+.instagram-phone img {
+    height: 35rem;
+
+}
+
+.instagram-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instagram-continue {
+    display: flex;/* elementos em linha ocupando todo espaço*/
+    align-items: center;
+    justify-content: space-around ;
+    flex-direction: column;/*agora o justify contente está na vertical e o align na horizintal*/
+    width: 50%;
+    min-height: 34rem;
+
+
+}
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+    gap: 8px;
+}
+
+/*nth-child é usado para aplicar 
+estilos em um elemento baseado na 
+ordem dele em relação aos seus irmãos*/
+.min-height-group
+/*.group:nth-child(1)*/ {
+    min-height: 19rem;
+}
+
+.instragram-logo {
+    height: -1rem;
+  
+}
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;/* esconde o oq passa da borda*/
+
+
+}
+.profile-photo img {
+    height: 6rem;
+
+}
+.instagram-login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    gap: 8px;
+}
+
+.app-download {
+    height: 40px;
+    width: 136px;
+    background-size: cover;
+}
+
+/* ao inves de tags imagens explicitas, as imagens
+são aplicadas como fundo do link, exigindo que as dimensoes
+do link sejam setadas no seu CSS explicitamente*/
+.app-download:nth-child(1) {
+    background-image: url('./imgs/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./imgs/google-button.png');
+}
+
+/* media queries */
+
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
